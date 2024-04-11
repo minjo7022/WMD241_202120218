@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap")
+  /* .이 붙어야 class name 
+웹에서 너비는 명시적으로 표현하지 않음. 최대, 최소로 지정
+rem이라는 단위로 바꾸기 옵션+z */ * {
+  box-sizing: border-box;
+}
+
+/* 이미지는 부모님 크기를 넘지 않게 너비 지정  */
+img {
+  max-width: 100%;
+}
+
+/* font는 body에서 정의하면 밑에 쭉 정의됨 */
+body {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 앞에 .card를 붙여 구체화. 하지만 너무 구체화를 높이면 어떤 규칙을 적용해도 안되는 경우가 많음.
+.card.card--color--blue {
+  background-color: oklch(98% 0.025 200);
+} */
+
+/* HSL HSB-기계장치의 밝기, LCH-사람이 인지하는 밝기(웹 디자인할 때 추천)
+(lightness chroma hue) */
+/* 먼저 쓰인 것보다 나중에 쓰이는게 더 힘이 쎄다 */
+.card {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 25rem;
+  background-color: oklch(95% 0.025 90);
+  overflow-x: hidden;
+  /* padding: 1rem; */
+  border-radius: 0.75rem;
+  margin-top: 3rem;
+}
+.card--color--blue {
+  background-color: oklch(98% 0.025 200);
+}
+
+/* psuedo selector */
+.card:first-child {
+  margin-top: 0;
+}
+
+/* 이미지 크기가 25rem 보다 작을 경우 너비 100%으로 지정 */
+.card__img {
+  width: 100%;
+}
+
+/* 여백 margin보다 padding으로 주는게 좋음. */
+.card__top {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.card__bottom {
+  padding: 1rem;
+}
+
+.card__p {
+  padding-top: 2rem;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.card__subtitle {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  line-height: 1.25rem;
+}
+
+/* 셀렉터 관련 기억할것.
+1. 띄어쓰기하면 자손을 의미 // 조상중에 있으면 무조건
+.a-class .b-class => a-classs를 조상으로 가진 모든 b-class
+2. > 를 쓰면 자식을 의미 // 부모일때만
+.a-class > .b-class => a-classs를 부모로 가진 모든 b-class
+3. .a-class.b-class => <elem class="a-class b-class"> */
+
+/* .card__bottom > .card__title {
+  font-weight: 400;
+} */
+.card__bottom .card__title {
+  font-weight: 400;
+}
+
+.card__bottom .card__subtitle {
+  margin-top: 0;
+}
