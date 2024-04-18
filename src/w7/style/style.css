@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  background-color: oklch(90% 0 0);
+  padding-inline: 2.5rem;
+}
+
+.container > div {
+  padding: 1rem;
+}
+
+.container > div:nth-child(1) {
+  background-color: oklch(90% 0.05 0);
+  border: 1px dotted oklch(40% 0.05 0);
+  color: oklch(20% 0.05 0);
+}
+.container > div:nth-child(2) {
+  background-color: oklch(90% 0.05 40);
+  border: 1px dotted oklch(40% 0.05 40);
+  color: oklch(20% 0.05 40);
+}
+.container > div:nth-child(3) {
+  background-color: oklch(90% 0.05 80);
+  border: 1px dotted oklch(40% 0.05 80);
+  color: oklch(20% 0.05 80);
+}
+.container > div:nth-child(4) {
+  background-color: oklch(90% 0.05 120);
+  border: 1px dotted oklch(40% 0.05 120);
+  color: oklch(20% 0.05 120);
+}
+.container > div:nth-child(5) {
+  background-color: oklch(90% 0.05 160);
+  border: 1px dotted oklch(40% 0.05 160);
+  color: oklch(20% 0.05 160);
+}
+
+.flex-container {
+  display: flex;
+}
+
+/* .flex-container > * {
+    flex-grow: 1;
+} */
+/* grow 1 basis 0 해줘야 균등한 사이즈 */
+
+.flex-child-opt-1 {
+  flex-grow: 1;
+  /* flex-shrink: ;
+  flex-basis: ; */
+}
+
+.flex-child-opt-2 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+/* flex 기본 가로로 정렬됨  */
+/* column가로 row세로 */
+.flex-container-opt-1 {
+  gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
+}
+
+.flex-container-opt-2 {
+  /* justify-content: left; */
+  /* justify-content: right; */
+  /* justify-content: center; */
+  justify-content: space-around;
+}
+
+/* stretch가 기본 옵션 start: 위를 가지고 나의 사이즈 까지 */
+.flex-container-opt-3 {
+  align-items: center;
+}
+/* 균등 사이즈 간격 벌어짐 왼쪽 오른쪽 정렬 중앙으로 정렬 예정 */
+.flex-container-opt-4 {
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-opt-4 > * {
+  width: 7.5rem;
+}
+
+.flex-wrap {
+  /* flex-wrap: nowrap; 줄바꿈하다라는 뜻 */
+  flex-wrap: wrap;
+}
+
+.flex-wrap-opt-1 {
+  column-gap: 0.75rem;
+  row-gap: 1.5rem;
+}
+
+.flex-wrap-opt-1 > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 12.5rem;
+}
