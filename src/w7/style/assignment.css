@@ -197,13 +197,13 @@ body {
   display: flex;
 }
 .container {
+  list-style: none;
   height: 25.125rem;
   background-color: #000;
   color: #fff;
   padding-inline: 1.875rem;
   padding-bottom: 3.75rem;
   li {
-    list-style: none;
     font-size: 1rem;
     line-height: 2rem;
   }
