@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.navigation {
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding-inline: 1.875rem;
+  padding-block: 1.1875rem;
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu-group {
+    display: flex;
+    align-items: center;
+    &--left {
+      gap: 0.8125rem;
+    }
+    &--right {
+      gap: 1rem;
+      // 가로가 900px 보다 작아지면 없어져라
+      @media (width < 56.25rem) {
+        & {
+          display: none;
+        }
+      }
+    }
+  }
+  //   &의 역할 .navigation__logo
+  &__logo {
+    height: 2rem;
+    // aspect-ratio 넣고 가로나 세로 지정
+    aspect-ratio: 200 / 51;
+  }
+  &__page-tittle {
+    margin-top: 0.1875rem;
+    padding-top: 0.1875rem;
+    padding-left: 0.8125rem;
+    line-height: 1.4375rem;
+    border-left: 0.125rem solid #fff;
+  }
+  &__btn {
+    padding-inline: 1.375rem;
+    padding-block: 0.375rem;
+    line-height: 2.25rem;
+    border-radius: 0.5rem;
+    &--outline {
+      border: 0.0625rem solid #fff;
+      background-color: #191a1b;
+    }
+    &--fill {
+      background-color: #515fcb;
+    }
+  }
+}
+.hero {
+  background-color: #dadbee;
+  padding-inline: 1.875rem;
+  padding-block: 5rem 7.1875rem;
+  & container {
+    width: 90%;
+    margin-inline: auto;
+  }
+  &__text {
+    font-size: 5rem;
+    line-height: 7.5rem;
+    text-align: center;
+    width: 50%;
+    margin-inline: auto;
+  }
+  &__search-input {
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 0.0625rem solid #000;
+    background-color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-inline: auto;
+    display: block;
+    width: 50%;
+  }
+}
+
+.feature {
+  padding: 1.875rem;
+  &__container {
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+    width: 80%;
+    margin-inline: auto;
+    padding-left: 0;
+    list-style: none;
+    margin-block: 0;
+    // 줄바꿈 기능 없음
+    display: flex;
+    // 줄바꿈 기능
+    flex-wrap: wrap;
+    // 직속 자녀들
+    & > * {
+      // 3개 사이즈 똑같이하는 기능
+      flex-basis: 0;
+      flex-grow: 1;
+      // 메모: 이따 제대로 된 사이즈 확정할 것
+      min-width: 25rem;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  gap: 1.875rem;
+  padding-top: 3rem;
+  &__area {
+  }
+  &--left {
+  }
+  &--right {
+  }
+  &__img {
+    max-width: 5rem;
+  }
+  &__tittle {
+  }
+  &__dsc {
+  }
+  &__more {
+  }
+}
