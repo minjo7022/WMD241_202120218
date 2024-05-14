@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ArminGrotesk, ArminGroteskBlack, ArminGroteskSemiBold, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.65rem;
+}
+
+.navigation {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  height: 4rem;
+  background-color: #f6f6eb;
+  color: #381fd1;
+  padding: 1rem;
+  width: 100%;
+}
+.navigation__container {
+  max-width: 60rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+.navigation__menu-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation__menu-group--left {
+  gap: 0.25rem;
+}
+.navigation__menu-group--right {
+  gap: 1rem;
+}
+.navigation__logo {
+  height: 2rem;
+}
+.navigation__ml {
+  display: block;
+  margin-left: 0.25rem;
+}
+.navigation__btn {
+  border-radius: 0.125rem;
+  padding-inline: 0.5rem;
+  line-height: 1.5rem;
+  display: flex;
+  list-style: none;
+}
+.navigation__btn--noline {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+@media (width < 53.125rem) {
+  .navigation__btn--noline {
+    display: none;
+  }
+}
+.navigation__btn--fill {
+  background-color: #381fd1;
+  color: #f6f6eb;
+  border-radius: 0.25rem;
+  align-items: center;
+  height: 2rem;
+  padding-inline: 0.5rem;
+}
+
+.hero {
+  background-color: #dadbee;
+  padding-inline: 1.875rem;
+  padding-block: 5rem 7.1875rem;
+}
+.hero container {
+  width: 90%;
+  margin-inline: auto;
+}
+.hero__text {
+  font-size: 5rem;
+  line-height: 7.5rem;
+  text-align: center;
+  width: 50%;
+  margin-inline: auto;
+}
+.hero__search-input {
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0.0625rem solid #000;
+  background-color: #fff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-inline: auto;
+  display: block;
+  width: 50%;
+}
+
+.feature {
+  padding: 1.875rem;
+}
+.feature__container {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 3rem;
+  width: 80%;
+  margin-inline: auto;
+  padding-left: 0;
+  list-style: none;
+  margin-block: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.feature__container > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 25rem;
+}
+
+.card {
+  display: flex;
+  gap: 1.875rem;
+  padding-top: 3rem;
+}
+.card__img {
+  max-width: 5rem;
+}
