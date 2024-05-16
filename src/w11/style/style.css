@@ -30,6 +30,10 @@ body {
   padding-inline: 24px;
   list-style-type: none;
 }
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
 
 .footer-column ul {
   list-style-type: none;

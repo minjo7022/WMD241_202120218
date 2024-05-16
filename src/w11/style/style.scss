@@ -28,6 +28,10 @@ body {
 .footer-section {
   padding-inline: 24px;
   list-style-type: none;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 }
 // .footer {
 //   margin-top: 6rem;
@@ -222,6 +226,7 @@ body {
   &__B {
     display: grid;
     grid-auto-rows: minmax(200px 1fr);
+
     margin-top: 4rem;
     margin-left: 4rem;
     // grid-auto-rows: minmax(77.4375rem 1fr);
