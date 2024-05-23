@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple js</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 75rem;
+        margin-inline: auto;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* grid-template-rows: ; 몇 줄이 생길지 모르니까 쓰면 안됨. */
+        grid-auto-rows: 1fr;
+        background-color: oklch(0.95 0 0);
+        gap: 1.5rem;
+      }
+
+      .card {
+        padding: 1rem;
+        background-color: oklch(0.9 0.2 240);
+        transition: all 300ms ease-in-out;
+      }
+
+      .card:hover {
+        background-color: oklch(0.9 0.2 120);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- (.card>lorem$)*10 -->
+    <div class="container">
+      <div class="card">Lorem.</div>
+      <div class="card">Numquam, rerum!</div>
+      <div class="card">Nostrum, facilis eveniet!</div>
+      <div class="card">Ullam enim accusamus ad?</div>
+      <div class="card">Illum non asperiores fugit ab.</div>
+      <div class="card">Nihil consequuntur adipisci ipsam cumque fugiat.</div>
+      <div class="card">
+        Aspernatur temporibus perferendis, voluptatem accusantium voluptates
+        quo?
+      </div>
+      <div class="card">
+        Mollitia, dicta! Aliquid illum assumenda esse quas explicabo.
+      </div>
+      <div class="card">
+        Voluptatem odit asperiores tempore eaque sit impedit autem voluptates.
+      </div>
+      <div class="card">
+        Tempora repellat provident aspernatur. Tenetur dolores tempore iusto ab
+        ipsum!
+      </div>
+    </div>
+  </body>
+</html>
