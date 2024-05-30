@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script>
+      LottieInteractivity.create({
+        player: "#lottie-2",
+        mode: "cursor",
+        actions: [
+          {
+            type: "click",
+            forceFlag: false,
+          },
+        ],
+      });
+    </script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus,
+          corrupti.
+        </h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          quo, est similique illo pariatur blanditiis. Odit sit at beatae quae!
+        </p>
+
+        <dotlottie-player
+          id="lottie-1"
+          class="lottie"
+          src="https://lottie.host/45446794-cc3c-4684-8052-c6b38877dea9/cLakeANWyg.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed eaque
+          obcaecati sapiente sint, in at accusamus officia incidunt deserunt
+          voluptas!
+        </p>
+        <lottie-player
+          id="lottie-2"
+          class="lottie"
+          src="https://lottie.host/45446794-cc3c-4684-8052-c6b38877dea9/cLakeANWyg.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></lottie-player>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
